@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelGo - Your Ultimate Travel Guide</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+  <header class="fixed top-0 w-full bg-gray-800 bg-opacity-90 backdrop-blur-md z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold">TravelGo</div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-green-400">Home</a>
+        <a href="#destinations" class="hover:text-green-400">Destinations</a>
+        <a href="#about" class="hover:text-green-400">About</a>
+        <a href="#contact" class="hover:text-green-400">Contact</a>
+        <a href="chatbot.html" class="hover:text-green-400">Chat with TravelGo</a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <button id="theme-toggle" aria-label="Toggle theme" class="text-xl"><i class="fas fa-moon"></i></button>
+        <button id="menu-btn" class="md:hidden text-xl" aria-label="Toggle menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+    <nav id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-90">
+      <a href="#home" class="block py-2 px-4 hover:bg-gray-700">Home</a>
+      <a href="#destinations" class="block py-2 px-4 hover:bg-gray-700">Destinations</a>
+      <a href="#about" class="block py-2 px-4 hover:bg-gray-700">About</a>
+      <a href="#contact" class="block py-2 px-4 hover:bg-gray-700">Contact</a>
+      <a href="chatbot.html" class="block py-2 px-4 hover:bg-gray-700">Chat with TravelGo</a>
+    </nav>
+  </header>
+
+  <section id="home" class="min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e')">
+    <div class="text-center bg-gray-900 bg-opacity-60 p-8 rounded-xl">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Explore the World with TravelGo</h1>
+      <p class="text-lg md:text-xl mb-6">Your AI-powered travel guide for every destination.</p>
+      <a href="#destinations" class="bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg text-lg">Start Exploring</a>
+    </div>
+  </section>
+
+  <section id="destinations" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Discover Destinations</h2>
+      <div class="search-bar flex justify-center mb-8">
+        <input type="text" id="destination-search" placeholder="Search destinations..." class="p-2 w-64 rounded-l-md bg-gray-700 text-white border-none focus:outline-none">
+        <button id="search-clear" aria-label="Clear search" class="bg-green-500 p-2 rounded-r-md hover:bg-green-600"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="destinations-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <a href="chatbot.html?destination=Paris" class="destination-card" data-destination="Paris">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris" loading="lazy">
+          <div class="card-content"><h3>Paris, France</h3><p>City of Light</p></div>
+        </a>
+        <a href="chatbot.html?destination=Santorini" class="destination-card" data-destination="Santorini">
+          <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff" alt="Santorini" loading="lazy">
+          <div class="card-content"><h3>Santorini, Greece</h3><p>Island Paradise</p></div>
+        </a>
+        <a href="chatbot.html?destination=Kyoto" class="destination-card" data-destination="Kyoto">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e" alt="Kyoto" loading="lazy">
+          <div class="card-content"><h3>Kyoto, Japan</h3><p>Cultural Gem</p></div>
+        </a>
+        <a href="chatbot.html?destination=New York" class="destination-card" data-destination="New York">
+          <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9" alt="New York" loading="lazy">
+          <div class="card-content"><h3>New York, USA</h3><p>The Big Apple</p></div>
+        </a>
+        <a href="chatbot.html?destination=Machu Picchu" class="destination-card" data-destination="Machu Picchu">
+          <img src="./mac.jpg" alt="Machu Picchu" loading="lazy">
+          <div class="card-content"><h3>Machu Picchu, Peru</h3><p>Incan Wonder</p></div>
+        </a>
+        <a href="chatbot.html?destination=Rome" class="destination-card" data-destination="Rome">
+          <img src="./rome.jpg" alt="Rome" loading="lazy">
+          <div class="card-content"><h3>Rome, Italy</h3><p>Eternal City</p></div>
+        </a>
+        <a href="chatbot.html?destination=Bangkok" class="destination-card" data-destination="Bangkok">
+          <img src="https://images.unsplash.com/photo-1563492065599-3520f775eeed" alt="Bangkok" loading="lazy">
+          <div class="card-content"><h3>Bangkok, Thailand</h3><p>Vibrant Metropolis</p></div>
+        </a>
+        <a href="chatbot.html?destination=Cape Town" class="destination-card" data-destination="Cape Town">
+          <img src="./cp.jpg" alt="Cape Town" loading="lazy">
+          <div class="card-content"><h3>Cape Town, South Africa</h3><p>Coastal Beauty</p></div>
+        </a>
+        <a href="chatbot.html?destination=Bali" class="destination-card" data-destination="Bali">
+          <img src="./bali.jpg" alt="Bali" loading="lazy">
+          <div class="card-content"><h3>Bali, Indonesia</h3><p>Tropical Haven</p></div>
+        </a>
+        <a href="chatbot.html?destination=Dubai" class="destination-card" data-destination="Dubai">
+          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c" alt="Dubai" loading="lazy">
+          <div class="card-content"><h3>Dubai, UAE</h3><p>City of Dreams</p></div>
+        </a>
+        <a href="chatbot.html?destination=Reykjavik" class="destination-card" data-destination="Reykjavik">
+          <img src="./rey.jpg" alt="Reykjavik" loading="lazy">
+          <div class="card-content"><h3>Reykjavik, Iceland</h3><p>Nordic Charm</p></div>
+        </a>
+        <a href="chatbot.html?destination=Rio de Janeiro" class="destination-card" data-destination="Rio de Janeiro">
+          <img src="./rio.jpg" alt="Rio de Janeiro" loading="lazy">
+          <div class="card-content"><h3>Rio de Janeiro, Brazil</h3><p>Carnival Capital</p></div>
+        </a>
+      </div>
+      <div id="destination-content" class="hidden mt-8 bg-gray-800 bg-opacity-90 rounded-xl p-6 max-w-4xl mx-auto">
+        <div class="flex justify-between items-center mb-4">
+          <h3 id="content-title" class="text-2xl font-bold"></h3>
+          <button id="content-clear" aria-label="Clear content" class="bg-green-500 p-2 rounded-md hover:bg-green-600"><i class="fas fa-times"></i></button>
+        </div>
+        <div id="content-details"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">About TravelGo</h2>
+      <p class="text-lg max-w-2xl mx-auto">TravelGo is your go-to AI travel guide, offering instant, concise advice on destinations, dining, and tips worldwide. Powered by Gemini AI, we make travel planning effortless.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Get in Touch</h2>
+      <form class="max-w-md mx-auto space-y-4">
+        <input type="text" placeholder="Name" required class="w-full p-3 rounded-md bg-gray-700 text-white border-none focus:outline-none">
+        <input type="email" placeholder="Email" required class="w-full p-3 rounded-md bg-gray-700 text-white border-none focus:outline-none">
+        <textarea placeholder="Message" required class="w-full p-3 rounded-md bg-gray-700 text-white border-none focus:outline-none resize-y min-h-[100px]"></textarea>
+        <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white p-3 rounded-md">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="chatbot-toggle" aria-label="Open chatbot" class="fixed bottom-6 right-6 bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600">
+    <i class="fas fa-comment"></i>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelGo Chatbot</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 text-white min-h-screen">
+  <header class="fixed top-0 w-full bg-gray-800 bg-opacity-90 backdrop-blur-md z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold">TravelGo Chatbot</div>
+      <nav class="flex space-x-6">
+        <a href="index.html" class="hover:text-green-400">Back to Home</a>
+        <button id="theme-toggle" aria-label="Toggle theme" class="text-xl"><i class="fas fa-moon"></i></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-20">
+    <h1 class="text-4xl font-bold text-center mb-8">Chat with TravelGo Guide</h1>
+    <p class="text-lg text-center mb-12 max-w-2xl mx-auto">Ask about any destination or click a tile below.I provide concise travel advice.</p>
+
+    <div class="chatbot-container bg-gray-900 bg-opacity-80 backdrop-blur-md rounded-xl p-6 max-w-3xl mx-auto mb-12">
+      <div id="chatbot-messages" class="h-[400px] overflow-y-auto mb-4 p-4 rounded-md bg-gray-800"></div>
+      <div class="chatbot-input flex">
+        <input type="text" id="chatbot-input" placeholder="Ask about any destination..." class="flex-grow p-3 rounded-l-md bg-gray-700 text-white border-none focus:outline-none focus:ring-2 focus:ring-green-400">
+        <button id="chatbot-send" aria-label="Send message" class="bg-green-500 p-3 rounded-r-md hover:bg-green-600"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+
+    <h2 class="text-3xl font-bold text-center mb-8">Explore Destinations</h2>
+    <div class="destinations-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div class="destination-card" data-destination="Paris">
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris" loading="lazy">
+        <div class="card-content"><h3>Paris, France</h3><p>City of Light</p></div>
+      </div>
+      <div class="destination-card" data-destination="Santorini">
+        <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff" alt="Santorini" loading="lazy">
+        <div class="card-content"><h3>Santorini, Greece</h3><p>Island Paradise</p></div>
+      </div>
+      <div class="destination-card" data-destination="Kyoto">
+        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e" alt="Kyoto" loading="lazy">
+        <div class="card-content"><h3>Kyoto, Japan</h3><p>Cultural Gem</p></div>
+      </div>
+      <div class="destination-card" data-destination="New York">
+        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9" alt="New York" loading="lazy">
+        <div class="card-content"><h3>New York, USA</h3><p>The Big Apple</p></div>
+      </div>
+      <div class="destination-card" data-destination="Machu Picchu">
+        <img src="./mac.jpg" alt="Machu Picchu" loading="lazy">
+        <div class="card-content"><h3>Machu Picchu, Peru</h3><p>Incan Wonder</p></div>
+      </div>
+      <div class="destination-card" data-destination="Rome">
+        <img src="./rome.jpg" alt="Rome" loading="lazy">
+        <div class="card-content"><h3>Rome, Italy</h3><p>Eternal City</p></div>
+      </div>
+      <div class="destination-card" data-destination="Bangkok">
+        <img src="https://images.unsplash.com/photo-1563492065599-3520f775eeed" alt="Bangkok" loading="lazy">
+        <div class="card-content"><h3>Bangkok, Thailand</h3><p>Vibrant Metropolis</p></div>
+      </div>
+      <div class="destination-card" data-destination="Cape Town">
+        <img src="./cp.jpg" alt="Cape Town" loading="lazy">
+        <div class="card-content"><h3>Cape Town, South Africa</h3><p>Coastal Beauty</p></div>
+      </div>
+      <div class="destination-card" data-destination="Bali">
+        <img src="./bali.jpg" alt="Bali" loading="lazy">
+        <div class="card-content"><h3>Bali, Indonesia</h3><p>Tropical Haven</p></div>
+      </div>
+      <div class="destination-card" data-destination="Dubai">
+        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c" alt="Dubai" loading="lazy">
+        <div class="card-content"><h3>Dubai, UAE</h3><p>City of Dreams</p></div>
+      </div>
+      <div class="destination-card" data-destination="Reykjavik">
+        <img src="./rey.jpg" alt="Reykjavik" loading="lazy">
+        <div class="card-content"><h3>Reykjavik, Iceland</h3><p>Nordic Charm</p></div>
+      </div>
+      <div class="destination-card" data-destination="Rio de Janeiro">
+        <img src="./rio.jpg" alt="Rio de Janeiro" loading="lazy">
+        <div class="card-content"><h3>Rio de Janeiro, Brazil</h3><p>Carnival Capital</p></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
