@@ -332,7 +332,7 @@ function handleUserInput() {
 // Chatbot page logic
 if (isChatbotPage) {
   // Initial welcome message
-  addMessage('Welcome to <strong>TravelGo Guide</strong>! Powered by Gemini AI, I provide instant travel advice for any destination. Ask away or click a destination tile.', false);
+  addMessage('Welcome to <strong>TravelGo Guide</strong>!I provide instant travel advice for any destination. Ask away or click a destination tile.', false);
 
   // Handle query parameter
   const urlParams = new URLSearchParams(window.location.search);
