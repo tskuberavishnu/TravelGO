@@ -316,7 +316,7 @@ function generateFallbackResponse(input) {
   if (input.includes('packing')) return 'Pack versatile clothing, a universal adapter, reusable bottle. Check weather and dress codes.';
   if (input.includes('weather')) return 'Weather varies by destination. Share your destination for specific advice.';
   if (input.includes('currency')) return 'Check local currency. Use apps like XE for rates. Carry cash for small vendors.';
-  if (input.includes('hello') || input.includes('hi')) return 'Hi! I’m TravelGo Guide, powered by Gemini AI. Ask about any destination or travel topic.';
+  if (input.includes('hello') || input.includes('hi')) return 'Hi! I’m TravelGo Guide. Ask about any destination or travel topic.';
 
   return 'Sorry, I didn’t catch that. Ask about a destination, tips, or activities. Or visit our <a href="index.html#contact">Contact section</a>.';
 }
